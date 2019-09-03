@@ -37,10 +37,10 @@ function loadContent() {
 
         const discountPrice = json[i].price * (100 - json[i].discount) / 100;
         const discountPriceText = json[i].currency + ' ' + discountPrice.toLocaleString('id-ID');
-        currentCard.querySelector(".card__text--before-discount").innerHTML = `${discountPriceText}`;
+        currentCard.querySelector(".card__text--before-discount").innerHTML = `${originalPriceText}`;
 
         const originalPriceText = (json[i].currency + ' ' + json[i].price.toLocaleString('id-ID'));
-        currentCard.querySelector(".card__text--after-discount").innerHTML = `${originalPriceText}`;
+        currentCard.querySelector(".card__text--after-discount").innerHTML = `${discountPriceText}`;
 
       }
 
